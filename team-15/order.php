@@ -1,7 +1,7 @@
 <?php
 
-	$lat_customer=$_POST("");
-	$long_customer=$_POST("");
+	$startlat=$_POST("");
+	$startlng=$_POST("");
 	
 	if(!$connection){
 		die("Data connection failed".mysqli_error($connection));
@@ -11,12 +11,12 @@
 		die("Database connection failed".mysql_error($select_db));
 	}
 	
-	$q1="select lat,long from sakhi where lat>=long && && && &&";
 	
 	
 	
-	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
-	$query="insert into customer values(".$cnt.",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.");"
-	
+	$query="SELECT ID,SQRT(
+    POW(69.1 * (latitude - [$startlat]), 2) +
+    POW(69.1 * ([$startlng] - longitude) * COS(latitude / 57.3), 2)) AS distance
+	FROM CUSTOMER HAVING distance < 200 ORDER BY distance;"	
 	
 ?>
