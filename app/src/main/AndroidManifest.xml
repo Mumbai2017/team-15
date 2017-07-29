@@ -13,15 +13,16 @@
         <activity
             android:name=".placeOrder"
             android:windowSoftInputMode="adjustResize">
-           
-        </activity>
-        <activity android:name=".OrderTrack">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OrderTrack">
+
+        </activity>
+        <activity android:name=".PlaceOrderConfirm"></activity>
     </application>
 
 </manifest>

@@ -5,8 +5,10 @@
 	$password=check($_POST(""));
 	$phone_no=check($_POST(""));
 	$online=check($_POST(""));
-	$lat=require(address.php);
+	$address=check($_POST(""));
+	$lat=check($_POST(""));
 	$long=check($_POST(""));
+	
 	$connection=mysqli_connnect("","","");
 	if(!$connection){
 		die("Data connection failed".mysqli_error($connection));

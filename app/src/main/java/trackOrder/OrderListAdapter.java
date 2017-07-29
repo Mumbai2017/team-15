@@ -54,9 +54,9 @@ public class OrderListAdapter extends BaseAdapter {
 
             }
             Order event=events.get(position);
-            myViewHolder.text1.setText(event.getId());
-            myViewHolder.text2.setText(" "+event.getExpectedDate());
-            myViewHolder.text3.setText(" "+event.getTotal());
+            myViewHolder.text1.setText("Order id "+event.getId());
+            myViewHolder.text2.setText("Expected Date "+event.getExpectedDate());
+            myViewHolder.text3.setText("Total cost "+event.getTotal());
 
             return row;
         }

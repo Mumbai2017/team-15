@@ -17,6 +17,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
+                android:paddingLeft="15dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/item1"
                 android:text="Item1"/>
@@ -25,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/price1"
                 android:paddingLeft="15dp"
-                android:text="price1"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -43,6 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item2"
+                android:paddingLeft="15dp"
                 android:text="Item2"/>
 
             <TextView
@@ -50,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/price2"
                 android:paddingLeft="15dp"
-                android:text="price2"/>
+                android:text="50"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item3"
+                android:paddingLeft="15dp"
                 android:text="Item3"/>
 
 
@@ -74,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/price3"
                 android:paddingLeft="15dp"
-                android:text="price3"/>
+                android:text="50"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,13 +93,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item4"
+                android:paddingLeft="15dp"
                 android:text="Item4"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price4"
                 android:paddingLeft="15dp"
-                android:text="price4"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -113,13 +117,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item5"
+                android:paddingLeft="15dp"
                 android:text="Item5"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price5"
                 android:paddingLeft="15dp"
-                android:text="price5"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -136,13 +141,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item6"
+                android:paddingLeft="15dp"
                 android:text="Item6"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price6"
                 android:paddingLeft="15dp"
-                android:text="price6"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -159,13 +165,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item7"
+                android:paddingLeft="15dp"
                 android:text="Item7"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price7"
                 android:paddingLeft="15dp"
-                android:text="price7"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -182,6 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item8"
+                android:paddingLeft="15dp"
 
                 android:text="Item8"/>
             <TextView
@@ -189,7 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price8"
-                android:text="price8"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -206,13 +214,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item9"
+                android:paddingLeft="15dp"
                 android:text="Item9"/>
             <TextView
                 android:paddingLeft="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price9"
-                android:text="price9"/>
+                android:text="50"/>
 
             <EditText
                 android:layout_width="30dp"
@@ -230,24 +239,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total"
-            android:id="@+id/tv"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/total"
-            android:text="0"
-            android:paddingLeft="5dp"
-            android:layout_toRightOf="@+id/tv"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="15dp"
-            android:text="Place order"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+            android:text="Continue"
+            android:id="@+id/con"/>
     </RelativeLayout>
 </RelativeLayout>
