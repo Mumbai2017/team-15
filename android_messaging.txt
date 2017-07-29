@@ -1,0 +1,35 @@
+HttpPost httppost = new HttpPost(
+                            "https://api.twilio.com/2010-04-01/Accounts/{ACCOUNT_SID}/SMS/Messages");
+        String base64EncodedCredentials = "Basic "
+                            + Base64.encodeToString(
+                                    (ACCOUNT_SID + ":" + AUTH_TOKEN).getBytes(),
+                                    Base64.NO_WRAP);
+
+                    httppost.setHeader("Authorization",
+                            base64EncodedCredentials);
+                    try {
+
+                        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                        nameValuePairs.add(new BasicNameValuePair("From",
+                                "+123424353534"));
+                        nameValuePairs.add(new BasicNameValuePair("To",
+                                "+914342423434"));
+                        nameValuePairs.add(new BasicNameValuePair("Body",
+                                "Welcome to Twilio"));
+
+                        httppost.setEntity(new UrlEncodedFormEntity(
+                                nameValuePairs));
+
+                        // Execute HTTP Post Request
+                        HttpResponse response = httpclient.execute(httppost);
+                        HttpEntity entity = response.getEntity();
+                        System.out.println("Entity post is: "
+                                + EntityUtils.toString(entity));
+
+
+                    } catch (ClientProtocolException e) {
+
+                    } catch (IOException e) {
+
+                    }
+                }
