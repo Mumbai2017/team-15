@@ -8,11 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".placeOrder"
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".placeOrder"
             android:windowSoftInputMode="adjustResize">
+           
+        </activity>
+        <activity android:name=".OrderTrack">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
