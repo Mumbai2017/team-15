@@ -17,7 +17,7 @@
 	}
 	
 	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
-	$query="insert into customer values("null",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.","$lat",".$long.");"
+	$query="insert into customer values("null",".$name.",".$email.",".$password.",".$phone_no.","$address",".$online.","$lat",".$long.");"
 
 	function check(m){
 			
