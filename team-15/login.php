@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "pratik12";
-$dbname = "demo";
+$dbname = "sanisa";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -13,7 +13,7 @@ if(!$conn) {
 // else {
 // 	echo "Connected successfully";
 // }
-;
+
 $email = $_POST["email"];
 $pwd = $_POST["pwd"];
 
@@ -24,13 +24,16 @@ if (mysqli_num_rows($get_password) > 0) {
 	$row = mysqli_fetch_assoc($get_password);
 	if($row["password"] == $pwd)
 	{
-		echo "authorised";
+		$get_id_query = "select user_id from user where email_id = \"" . $email . "\";";
+	// echo $get_id_query;
+	$result_new = mysqli_query($conn, $get_id_query);
+	$result_new = mysqli_fetch_assoc($result_new);
+	echo $result_new["user_id"];
 	}
 	else {
-	echo "unauthorized";
+	echo "-1";
 
 }
 
 }
-mysqli_close($conn);
 ?>
