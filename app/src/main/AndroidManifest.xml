@@ -13,7 +13,7 @@
         <activity
             android:name=".placeOrder"
             android:windowSoftInputMode="adjustResize">
-           
+
         </activity>
         <activity android:name=".OrderTrack">
             <intent-filter>
