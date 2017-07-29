@@ -1,9 +1,5 @@
 <?php
-	$user_id=$_POST("");//$_SESSION("user_id");
-	$item_id=$_POST("");
-	$quantity=$_POST("");
-	$booked_date=mkdate();
-	$status=$_POST("");
+	
 	
 	$connection=mysqli_connnect("","","");
 	if(!$connection){
@@ -14,8 +10,17 @@
 		die("Database connection failed".mysql_error($select_db));
 	}
 	
-	
-	$query="insert into inventory_request values(".$user_id",".$item_id.",".$quantity.",".$booked_date.","$status");"
-
-
+	for(i=0;i<9;i++)
+	{
+		
+		$user_id=$_POST("");//$_SESSION("user_id");
+		$item_id=$_POST("");
+		$quantity=$_POST("");
+		$booked_date=mkdate();
+		$status=$_POST("");
+		if($quantity!=0){
+		$query="insert into inventory_request values(".$user_id",".$item_id.",".$quantity.",".$booked_date.","$status");"
+		$query1="update inventory set values="" "
+		}
+	}
 ?>
