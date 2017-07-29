@@ -6,6 +6,7 @@ package orderPlace;
 
 public class Item {
 
+    int id;
     String name;
     int price;
     int quantity;
