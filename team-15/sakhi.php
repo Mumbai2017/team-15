@@ -5,7 +5,7 @@
 	$password=check($_POST(""));
 	$phone_no=check($_POST(""));
 	$online=check($_POST(""));
-	$lat=check($_POST(""));
+	$lat=require(address.php);
 	$long=check($_POST(""));
 	$connection=mysqli_connnect("","","");
 	if(!$connection){
@@ -17,7 +17,7 @@
 	}
 	
 	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
-	$query="insert into customer values("null",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.","$lat",".$long.");"
+	$query="insert into customer values("",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.","$lat",".$long.");"
 
 	function check(m){
 			

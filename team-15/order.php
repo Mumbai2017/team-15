@@ -1,22 +1,14 @@
-<?php
-
-	$startlat=$_POST("");
-	$startlng=$_POST("");
+<?php 
+	//session_start();
+	//$id=$_SESSION["username"];
+	$cust_id=$_POST("");
+	$preference=$_POST("");
+	$created_at=mktime();
 	
-	if(!$connection){
-		die("Data connection failed".mysqli_error($connection));
-	}
-	$select_db=mysqli_select_db('');
-	if(!$select_db){
-		die("Database connection failed".mysql_error($select_db));
-	}
+	$q="insert into orders value('""','".cust_id."','".preference."','".created_at."')";
 	
 	
 	
 	
-	$query="SELECT ID,SQRT(
-    POW(69.1 * (latitude - [$startlat]), 2) +
-    POW(69.1 * ([$startlng] - longitude) * COS(latitude / 57.3), 2)) AS distance
-	FROM CUSTOMER HAVING distance < 200 ORDER BY distance;"	
 	
 ?>
