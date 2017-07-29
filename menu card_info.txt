@@ -1,0 +1,9 @@
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Breakfast",100,1);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Dahi Bajri Methi",100,2);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Jeera",100,3);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Khichdi",100,4);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Low Calorie",100,5);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Methi Masala",100,6);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Nachni",100,7);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Peppery Oats",100,8);
+INSERT INTO `menu_card`(`item_name`, `price`, `item_id`) VALUES ("Punjabi Masala",100,9);
