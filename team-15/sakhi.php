@@ -1,12 +1,12 @@
 <?php
 
-	$name=$_POST("");
-	$email=$_POST("");
-	$password=$_POST("");
-	$phone_no=$_POST("");
-	$online=$_POST("");
-	$lat=$_POST("");
-	$long=$_POST("");
+	$name=check($_POST(""));
+	$email=check($_POST(""));
+	$password=check($_POST(""));
+	$phone_no=check($_POST(""));
+	$online=check($_POST(""));
+	$lat=check($_POST(""));
+	$long=check($_POST(""));
 	$connection=mysqli_connnect("","","");
 	if(!$connection){
 		die("Data connection failed".mysqli_error($connection));
@@ -18,4 +18,12 @@
 	
 	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
 	$query="insert into customer values(".$cnt.",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.","$lat",".$long.");"
+
+	function check(m){
+			
+	  $data = trim($data);
+	  $data = stripslashes($data);
+	  $data = htmlspecialchars($data);
+	  return $data;		
+	}
 ?>

@@ -11,7 +11,10 @@
 		die("Database connection failed".mysql_error($select_db));
 	}
 	
-	$q1="select "
+	$q1="select lat,long from sakhi where lat>=long && && && &&";
+	
+	
+	
 	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
 	$query="insert into customer values(".$cnt.",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.");"
 	
