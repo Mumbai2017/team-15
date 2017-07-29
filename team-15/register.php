@@ -4,6 +4,7 @@
 	$name=$_POST("");
 	$email=$_POST("");
 	$address=$_POST("");
+	$password=$_POST("");
 	$online=$_POST("");
 	$connection=mysqli_connnect("","","");
 	if(!$connection){
@@ -15,7 +16,7 @@
 	}
 	
 	$cnt = mysql_num_rows(mysql_query("SELECT * FROM TABLE"));
-	$query="insert into customer values(".$cnt.",".$name",".$email.",".$phone_no.","$address",".$online.");"
+	$query="insert into customer values(".$cnt.",".$name",".$email.",".$password.",".$phone_no.","$address",".$online.");"
 	
 	
 ?>
