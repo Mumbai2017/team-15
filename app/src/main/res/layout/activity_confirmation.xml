@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.cfg15.Confirmation">
+
+
+    <TextView
+        android:id="@+id/tvConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="202dp"
+        android:text="Ordered Placed!!" />
+
+    <TextView
+        android:id="@+id/tvConfirmationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Your order is expected to be delivered to you within 7 working days." />
+
+    <TextView
+        android:id="@+id/tvFinalOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvConfirmationMessage"
+        android:layout_below="@+id/tvConfirmationMessage"
+        android:layout_marginTop="32dp"
+        android:text="Final Amount" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvFinalOrder"
+        android:layout_below="@+id/tvFinalOrder"
+        android:layout_marginTop="38dp"
+        android:text="Rupees %s" />
+
+</RelativeLayout>
