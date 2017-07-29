@@ -1,8 +1,9 @@
 package com.example.admin.cfg15;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,12 +14,20 @@ import android.widget.RadioGroup;
 
 public class Login extends AppCompatActivity {
 
+    public static final String MyPREFERENCES = "Data" ;
+    public static final String Name = "name";
+    public static final String UserID = "userid";
+    public static final String Email = "email";
+
+    public static int user_id=0;
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
         final EditText editTextPassword = (EditText) findViewById(R.id.input_password);
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rgSelect);
         final Button btnLogin = (Button) findViewById(R.id.btn_login);
@@ -28,13 +37,34 @@ public class Login extends AppCompatActivity {
                 RadioButton rbNew = (RadioButton) findViewById(R.id.rbNewUser);
                 RadioButton rbExisting = (RadioButton) findViewById(R.id.rbExistingUser);
                 if (rbNew.isChecked()) {
-                    editTextPassword.setEnabled(false);
+                    //editTextPassword.setEnabled(false);
                     btnLogin.setText("Sign Up");
                 }
                 if (rbExisting.isChecked()) {
-                    editTextPassword.setEnabled(true);
+                    //editTextPassword.setEnabled(true);
                     btnLogin.setText("Sign In");
 
+                }
+            }
+        });
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText email= (EditText) findViewById(R.id.input_email);
+                EditText pass= (EditText) findViewById(R.id.input_password);
+
+                RegistrationApi registrationApi=new RegistrationApi(getApplicationContext());
+                registrationApi.execute(email.getText().toString(),pass.getText().toString());
+                if(user_id!=-1|| user_id!=0){
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+
+                    editor.putString(Name, ""); // TODO: 7/30/2017 add name here 
+                    editor.putString(UserID, ""+user_id);
+                    editor.putString(Email, email.getText().toString());
+                    editor.commit();
+
+                    Intent in=new Intent(Login.this,OrderChoice.class);
+                    startActivity(in);
                 }
             }
         });
