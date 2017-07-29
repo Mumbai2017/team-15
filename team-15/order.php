@@ -8,7 +8,7 @@
 	$item_id=$_POST("");
 	$q="insert into orders value('""','".cust_id."','".preference."','".created_at."')";
 	
-	$query="insert into "
+	$query="insert into  "
 	
 	
 	
