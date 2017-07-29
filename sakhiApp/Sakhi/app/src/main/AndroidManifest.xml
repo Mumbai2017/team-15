@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".StatusSakhi"></activity>
+=======
+        <activity android:name=".Registeration" />
+        <activity android:name=".Orders"></activity>
+>>>>>>> fa6f232dba48164b198b9f328b7ecf860f6bc53d
     </application>
 
 </manifest>
