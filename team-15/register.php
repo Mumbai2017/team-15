@@ -23,10 +23,7 @@ $register_query = "insert into user values (null, \"" . $name . "\",\"" . $email
 // echo $register_query;
 $result = mysqli_query($conn, $register_query);
 
-$get_id_query = "select user_id from user where email_id = \"" . $email . "\";";
-// echo $get_id_query;
-$result_new = mysqli_query($conn, $get_id_query);
-$result_new = mysqli_fetch_assoc($result_new);
-echo $result_new["user_id"];
+$get_id = "select user_id from user where email_id = \"" . $email . "\";";
+echo $get_id;
 // echo "done";
 ?>

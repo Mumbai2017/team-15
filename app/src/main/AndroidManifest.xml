@@ -19,9 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OrderTrack"></activity>
-        <activity android:name=".PlaceOrderConfirm" />
-        <activity android:name=".OrderChoice"></activity>
+        <activity android:name=".OrderTrack">
+
+        </activity>
+        <activity android:name=".PlaceOrderConfirm"></activity>
     </application>
 
 </manifest>
