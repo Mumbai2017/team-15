@@ -9,11 +9,12 @@ import android.widget.TextView;
 
 public class PlaceOrderConfirm extends AppCompatActivity {
 
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order_confirm);
-        TextView tv= (TextView) findViewById(R.id.tot);
+        tv= (TextView) findViewById(R.id.tot);
         tv.setText(getIntent().getStringExtra("total"));
 
         // TODO: 7/30/2017 add order int db
@@ -22,6 +23,7 @@ public class PlaceOrderConfirm extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(PlaceOrderConfirm.this, Confirmation.class);
+                in.putExtra("total",""+tv.getText().toString());
                 startActivity(in);
             }
         });
