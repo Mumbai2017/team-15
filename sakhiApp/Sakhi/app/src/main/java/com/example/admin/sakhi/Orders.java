@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Orders extends AppCompatActivity {
-Intent in;
+    Intent in;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
-        Intent out=getIntent();
+        Intent out = getIntent();
     }
 }

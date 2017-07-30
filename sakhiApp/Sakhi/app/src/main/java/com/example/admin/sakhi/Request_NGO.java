@@ -5,29 +5,19 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-<<<<<<< HEAD
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class Request_NGO extends AppCompatActivity {
+    Button place;
 
-
-
-=======
-import android.view.View;
-import android.widget.Button;
-
-public class Request_NGO extends AppCompatActivity {
-Button place;
->>>>>>> 7b277a0095dbf8be9e01f794bcaeb702af58fa8d
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request__ngo);
-<<<<<<< HEAD
-
-=======
-        Intent out=getIntent();
-        place=(Button)findViewById(R.id.con);
+        Intent out = getIntent();
+        place = (Button) findViewById(R.id.con);
         place.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +33,5 @@ Button place;
                 alertDialog.show();
             }
         });
->>>>>>> 7b277a0095dbf8be9e01f794bcaeb702af58fa8d
     }
 }
