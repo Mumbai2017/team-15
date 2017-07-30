@@ -35,7 +35,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Cost"
             android:id="@+id/total"
-            android:layout_below="@+id/orderid"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
     </RelativeLayout>
 </RelativeLayout>

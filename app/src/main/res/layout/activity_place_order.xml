@@ -7,8 +7,10 @@
     tools:context="com.example.admin.cfg15.placeOrder">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/header"
         android:orientation="vertical">
         <LinearLayout
@@ -20,16 +22,17 @@
                 android:paddingLeft="15dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/item1"
-                android:text="Breakfast"/>
+                android:text="Breakfast          "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/price1"
+                android:layout_marginRight="10dp"
                 android:paddingLeft="15dp"
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
 
@@ -44,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/item2"
+
                 android:paddingLeft="15dp"
                 android:text="Dahi Bajri Methi"/>
 
@@ -54,7 +58,7 @@
                 android:paddingLeft="15dp"
                 android:text="50"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:paddingLeft="15dp"
@@ -69,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item3"
                 android:paddingLeft="15dp"
-                android:text="Jeera"/>
+                android:text="Jeera                    "/>
 
 
             <TextView
@@ -79,7 +83,7 @@
                 android:paddingLeft="15dp"
                 android:text="50"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:paddingLeft="15dp"
@@ -94,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item4"
                 android:paddingLeft="15dp"
-                android:text="Khichdi"/>
+                android:text="Khichdi                 "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -103,7 +107,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:paddingLeft="15dp"
@@ -118,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item5"
                 android:paddingLeft="15dp"
-                android:text="Low Calorie"/>
+                android:text="Low Calorie         "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +131,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:paddingLeft="15dp"
@@ -142,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item6"
                 android:paddingLeft="15dp"
-                android:text="Methi Masala"/>
+                android:text="Methi Masala       "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +155,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:paddingLeft="15dp"
@@ -166,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item7"
                 android:paddingLeft="15dp"
-                android:text="Nachni"/>
+                android:text="Nachni                  "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,7 +179,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:text="0"
@@ -191,7 +195,7 @@
                 android:id="@+id/item8"
                 android:paddingLeft="15dp"
 
-                android:text="Peppery Oats"/>
+                android:text="Peppery Oats       "/>
             <TextView
                 android:paddingLeft="15dp"
                 android:layout_width="wrap_content"
@@ -200,7 +204,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:text="0"
@@ -215,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item9"
                 android:paddingLeft="15dp"
-                android:text="punjabi Masala"/>
+                android:text="punjabi Masala     "/>
             <TextView
                 android:paddingLeft="15dp"
                 android:layout_width="wrap_content"
@@ -224,7 +228,7 @@
                 android:text="50"/>
 
             <EditText
-                android:layout_width="30dp"
+                android:layout_width="match_parent"
                 android:paddingLeft="15dp"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -237,15 +241,15 @@
         android:id="@+id/footer"
         android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/header"
         android:layout_alignParentStart="true">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="15dp"
             android:text="Continue"
-            android:id="@+id/con"/>
+            android:id="@+id/con"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </RelativeLayout>

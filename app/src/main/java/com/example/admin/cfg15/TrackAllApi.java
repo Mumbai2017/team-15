@@ -66,8 +66,14 @@ public class TrackAllApi extends AsyncTask<String, Void, Void>{
 
             while ((str = br.readLine()) != null) {
                 Log.d("Volley", str);
-                String s[]=str.split("=");
-                list.add(new Order(Integer.parseInt(s[0]),s[1],Integer.parseInt(s[2])));
+                String ss[]=str.split(" < ");
+                for(int i=0;i<ss.length;i++){
+                    String s[]=ss[i].split("=");
+                    Log.d("Volly",s[0]);
+                    Log.d("Volly",s[1]);
+                    Log.d("Volly",s[2]);
+                    list.add(new Order(Integer.parseInt(s[0]),s[1],Integer.parseInt(s[2])));
+                }
             }
 
 
