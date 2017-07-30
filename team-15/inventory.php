@@ -1,9 +1,6 @@
 <?php
 	
 
-	$nm
-
-
 
 	$sakhi_id=select sakhi_id from  order_quantity, order_schedule where status="True" && order_quantity.order_id=order_schedule.order_id;
 	$item=select item_id,quantity from order_quantity;
