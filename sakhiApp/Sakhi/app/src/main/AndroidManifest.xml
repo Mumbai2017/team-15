@@ -21,6 +21,8 @@
         <activity android:name=".Orders" />
         <activity android:name=".Feedback" />
         <activity android:name=".NGODash"></activity>
+        <activity android:name=".Request_NGO" />
+        <activity android:name=".Sakhi_details"></activity>
     </application>
 
 </manifest>

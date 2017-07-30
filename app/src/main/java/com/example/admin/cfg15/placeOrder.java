@@ -16,6 +16,7 @@ public class placeOrder extends AppCompatActivity {
     EditText quat1,quat2,quat3,quat4,quat5,quat6,quat7,quat8,quat9;
     TextView price1,price2,price3,price4,price5,price6,price7,price8,price9;
 
+    String returnStr="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class placeOrder extends AppCompatActivity {
                 int total=calculateTotal();
                 Intent i = new Intent(getApplicationContext(),PlaceOrderConfirm.class);
                 i.putExtra("total", ""+total);
+                i.putExtra("ReturnStr",returnStr);
                 startActivity(i);
             }
         });
@@ -54,6 +56,11 @@ public class placeOrder extends AppCompatActivity {
     }
     int calculateTotal(){
         int total=0;
+        returnStr=quat1.getText().toString()+" "+quat2.getText().toString()+" "+
+                quat3.getText().toString()+" "+quat4.getText().toString()+" "+
+                quat5.getText().toString()+" "+quat6.getText().toString()+" "+
+                quat7.getText().toString()+" "+quat8.getText().toString()+" "+
+                quat9.getText().toString();
         total+=Integer.parseInt(quat1.getText().toString())*Integer.parseInt(price1.getText().toString());
         total+=Integer.parseInt(quat2.getText().toString())*Integer.parseInt(price2.getText().toString());
         total+=Integer.parseInt(quat3.getText().toString())*Integer.parseInt(price3.getText().toString());

@@ -26,6 +26,10 @@
         <activity android:name=".Confirmation">
 
         </activity>
+
+        <activity android:name=".Feedback">
+
+        </activity>
         <activity android:name=".PlaceOrderConfirm"></activity>
         <activity android:name=".Login">
             <intent-filter>
