@@ -20,29 +20,29 @@
         android:id="@+id/bViewOrders"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/bRequestFromNGO"
+        android:layout_alignStart="@+id/Check"
         android:layout_below="@+id/toggleButtonStatus"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="102dp"
         android:gravity="center"
-        android:text="Check Orders" />
+        android:text="Check Orders"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/bViewSakhi"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/bFeedback"
-        android:layout_below="@+id/bCheckOrder"
         android:layout_marginTop="36dp"
         android:gravity="center"
-        android:text="View Sakhis" />
+        android:text="View Sakhis"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/bGenerateReport"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bRequestFromNGO"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="200dp"
         android:text="Generate Report" />
 
 
@@ -50,9 +50,8 @@
         android:id="@+id/bBroadcasrtToAllSakhis"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bRequestFromNGO"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="260dp"
         android:text="Broadcast to Sakhis" />
 
 </RelativeLayout>
