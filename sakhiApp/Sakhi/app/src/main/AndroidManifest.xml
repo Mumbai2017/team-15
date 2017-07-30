@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".StatusSakhi" />
-        <activity android:name=".Registeration" />
+        <activity android:name=".Registration" />
         <activity android:name=".Orders" />
         <activity android:name=".Feedback" />
         <activity android:name=".NGODash"></activity>
