@@ -29,6 +29,11 @@ public class Login extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
+        String userName=sharedpreferences.getString(UserID,"NA");
+        if(!userName.equals("NA")){
+            Intent in=new Intent(Login.this,OrderChoice.class);
+            startActivity(in);
+        }
         final EditText editTextPassword = (EditText) findViewById(R.id.input_password);
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rgSelect);
         final Button btnLogin = (Button) findViewById(R.id.btn_login);

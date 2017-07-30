@@ -1,15 +1,19 @@
-<?php;
+<?php
 
-	$user_id=$_POST("");
-	$type=$_POST("");
-	$text=$_POST("");
+	$user_id=$_POST['user_id'];
+	$type=$_POST['type'];
+	$text=$_POST['text'];
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "sanisa";
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	if(!$conn) {
 		die("Connection failed" . mysqli_error());
 	}
- 	else {
- 		echo "Connected successfully";
- 	}
- 	$q="insert into feedback values("'.type.'","'.user_id.'","'.text.'");
+ 	$q="insert into feedback values('".$type."','".$user_id."','".$text."')";
+	$result = mysqli_query($conn, $q);
+	
+	
 ?>

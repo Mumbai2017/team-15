@@ -12,13 +12,16 @@
         android:paddingRight="24dp"
         android:paddingTop="56dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
-            android:src="@drawable/sanisa" />
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/sanisa" />
+        </RelativeLayout>
         <RadioGroup
             android:id="@+id/rgSelect"
             android:layout_width="fill_parent"
@@ -32,9 +35,9 @@
                 android:id="@+id/rbNewUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="90dp"
                 android:checked="false"
-                android:text="New User"
+                android:text="New User       "
                 android:textSize="20dp" />
 
             <RadioButton

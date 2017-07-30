@@ -15,27 +15,32 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+
+import trackOrder.Order;
 
 /**
  * Created by Admin on 7/30/2017.
  */
 
-public class SendOrderAPI extends AsyncTask<String, Void, String> {
-    final String InsertURL = "http://192.168.43.186/CFG/orders.php";
+public class TrackAllApi extends AsyncTask<String, Void, Void>{
 
-    Context context;
+        public  ArrayList<Order> list=new ArrayList<>();
+        final String InsertURL = "http://192.168.43.186/CFG/get_order.php";
 
-    public SendOrderAPI(Context context) {
+        Context context;
+
+        public TrackAllApi(Context context) {
         this.context = context;
     }
 
-    @Override
-    protected void onPreExecute() {
+        @Override
+        protected void onPreExecute() {
         super.onPreExecute();
     }
 
-    @Override
-    protected String doInBackground(String... params) {
+        @Override
+        protected Void doInBackground(String... params) {
         String reply = "";
         try {
             URL insert = new URL(InsertURL);
@@ -49,37 +54,34 @@ public class SendOrderAPI extends AsyncTask<String, Void, String> {
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
 
 
-            String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(params[0], "UTF-8") + "&" +
-                    URLEncoder.encode("addr", "UTF-8") + "=" + URLEncoder.encode(params[1], "UTF-8") + "&" +
-                    URLEncoder.encode("total", "UTF-8") + "=" + URLEncoder.encode(params[2], "UTF-8")+ "&" +
-                    URLEncoder.encode("return", "UTF-8") + "=" + URLEncoder.encode(params[3], "UTF-8");
+            String data =
+                    URLEncoder.encode("user_id", "UTF-8") + "=" + URLEncoder.encode(params[0], "UTF-8");
 
             bufferedWriter.write(data);
             bufferedWriter.flush();
             bufferedWriter.close();
-            Log.d("Volley",params[3]);
+            Log.d("Volley", "hey hey");
             BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "iso-8859-1"));
             String str;
 
             while ((str = br.readLine()) != null) {
-                reply += str;
+                Log.d("Volley", str);
+                String s[]=str.split("=");
+                list.add(new Order(Integer.parseInt(s[0]),s[1],Integer.parseInt(s[2])));
             }
-            Log.d("Volley", reply);
+
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return reply;
+        return null;
     }
 
-    @Override
-    protected void onPostExecute(String aVoid) {
-        Toast.makeText(context, aVoid, Toast.LENGTH_LONG).show();
-        if(aVoid.contains("-1")|| aVoid.isEmpty()) PlaceOrderConfirm.OI=""+-1;
-        else PlaceOrderConfirm.OI=""+Integer.parseInt(aVoid);
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            OrderTrack.initList(list);
     }
-
-
 }
+

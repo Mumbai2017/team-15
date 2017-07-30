@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="15dp"
     tools:context="com.example.admin.cfg15.Confirmation">
 
 
@@ -11,19 +12,19 @@
         android:id="@+id/tvConfirmation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="202dp"
-        android:text="Ordered Placed!!" />
+        android:text="Ordered Placed!!"
+        android:layout_above="@+id/tvConfirmationMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
 
     <TextView
         android:id="@+id/tvConfirmationMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:text="Your order is expected to be delivered to you within 7 working days."
         android:layout_centerVertical="true"
-        android:text="Your order is expected to be delivered to you within 7 working days." />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp" />
 
     <TextView
         android:id="@+id/tvFinalOrder"
@@ -41,11 +42,13 @@
         android:layout_alignStart="@+id/tvFinalOrder"
         android:layout_below="@+id/tvFinalOrder"
         android:layout_marginTop="38dp"
-        android:text="Rupees %s" />
+        android:text="Rupees" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Feedback"
-        android:id="@+id/btn"/>
+        android:id="@+id/btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tvConfirmation" />
 </RelativeLayout>

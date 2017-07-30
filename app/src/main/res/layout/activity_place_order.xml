@@ -20,7 +20,7 @@
                 android:paddingLeft="15dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/item1"
-                android:text="Item1"/>
+                android:text="Breakfast"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item2"
                 android:paddingLeft="15dp"
-                android:text="Item2"/>
+                android:text="Dahi Bajri Methi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item3"
                 android:paddingLeft="15dp"
-                android:text="Item3"/>
+                android:text="Jeera"/>
 
 
             <TextView
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item4"
                 android:paddingLeft="15dp"
-                android:text="Item4"/>
+                android:text="Khichdi"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item5"
                 android:paddingLeft="15dp"
-                android:text="Item5"/>
+                android:text="Low Calorie"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item6"
                 android:paddingLeft="15dp"
-                android:text="Item6"/>
+                android:text="Methi Masala"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item7"
                 android:paddingLeft="15dp"
-                android:text="Item7"/>
+                android:text="Nachni"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
                 android:id="@+id/item8"
                 android:paddingLeft="15dp"
 
-                android:text="Item8"/>
+                android:text="Peppery Oats"/>
             <TextView
                 android:paddingLeft="15dp"
                 android:layout_width="wrap_content"
@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item9"
                 android:paddingLeft="15dp"
-                android:text="Item9"/>
+                android:text="punjabi Masala"/>
             <TextView
                 android:paddingLeft="15dp"
                 android:layout_width="wrap_content"

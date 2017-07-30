@@ -15,11 +15,10 @@ $order_id = $_POST["user_id"];
 
 $select_query = "select * from orders where user_id = " . $order_id . ";";
 $result = mysqli_query($conn, $select_query);
-
-$result = mysqli_fetch_assoc($result);
-
-echo $result["order_id"];
-echo $result["bill_amount"];
-echo $result["created_at"];
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo $row["order_id"]."=".$row["bill_amount"]."=".$row["created_at"];
+	}
+}
 
 ?>

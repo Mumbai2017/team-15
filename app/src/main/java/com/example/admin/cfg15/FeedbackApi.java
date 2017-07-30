@@ -20,12 +20,13 @@ import java.net.URLEncoder;
  * Created by Admin on 7/30/2017.
  */
 
-public class SendOrderAPI extends AsyncTask<String, Void, String> {
-    final String InsertURL = "http://192.168.43.186/CFG/orders.php";
+public class FeedbackApi extends AsyncTask<String, Void, Void> {
+
+    final String InsertURL = "http://192.168.43.186/CFG/feedback.php";
 
     Context context;
 
-    public SendOrderAPI(Context context) {
+    public FeedbackApi(Context context) {
         this.context = context;
     }
 
@@ -35,8 +36,8 @@ public class SendOrderAPI extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        String reply = "";
+    protected Void doInBackground(String... params) {
+
         try {
             URL insert = new URL(InsertURL);
             HttpURLConnection httpURLConnection = (HttpURLConnection) insert.openConnection();
@@ -49,37 +50,27 @@ public class SendOrderAPI extends AsyncTask<String, Void, String> {
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
 
 
-            String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(params[0], "UTF-8") + "&" +
-                    URLEncoder.encode("addr", "UTF-8") + "=" + URLEncoder.encode(params[1], "UTF-8") + "&" +
-                    URLEncoder.encode("total", "UTF-8") + "=" + URLEncoder.encode(params[2], "UTF-8")+ "&" +
-                    URLEncoder.encode("return", "UTF-8") + "=" + URLEncoder.encode(params[3], "UTF-8");
-
+            String data = URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(params[0], "UTF-8") + "&" +
+                    URLEncoder.encode("user_id", "UTF-8") + "=" + URLEncoder.encode(params[1], "UTF-8") + "&" +
+                    URLEncoder.encode("text", "UTF-8") + "=" + URLEncoder.encode(params[2], "UTF-8");
             bufferedWriter.write(data);
             bufferedWriter.flush();
             bufferedWriter.close();
-            Log.d("Volley",params[3]);
+            Log.d("Volley", "hey hey");
             BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "iso-8859-1"));
-            String str;
-
-            while ((str = br.readLine()) != null) {
-                reply += str;
-            }
-            Log.d("Volley", reply);
-
+            br.close();
+            Log.d("Volley", "hey 111");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return reply;
+        return null;
     }
 
     @Override
-    protected void onPostExecute(String aVoid) {
-        Toast.makeText(context, aVoid, Toast.LENGTH_LONG).show();
-        if(aVoid.contains("-1")|| aVoid.isEmpty()) PlaceOrderConfirm.OI=""+-1;
-        else PlaceOrderConfirm.OI=""+Integer.parseInt(aVoid);
+    protected void onPostExecute(Void aVoid) {
+        Toast.makeText(context, "feedback submitted!", Toast.LENGTH_LONG).show();
     }
-
 
 }
