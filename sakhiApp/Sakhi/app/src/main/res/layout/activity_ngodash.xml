@@ -4,17 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.sakhi.StatusSakhi">
-
-    <ToggleButton
-        android:id="@+id/toggleButtonStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginTop="62dp"
-        android:text="ToggleButton" />
+    tools:context="com.example.admin.sakhi.NGODash">
 
     <TextView
         android:id="@+id/tvCheckOrder"
@@ -27,7 +17,7 @@
         android:text="TextView" />
 
     <Button
-        android:id="@+id/bCheckOrder"
+        android:id="@+id/bViewOrders"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/bRequestFromNGO"
@@ -37,21 +27,32 @@
         android:text="Check Orders" />
 
     <Button
-        android:id="@+id/bRequestFromNGO"
+        android:id="@+id/bViewSakhi"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/bFeedback"
         android:layout_below="@+id/bCheckOrder"
         android:layout_marginTop="36dp"
         android:gravity="center"
-        android:text="Request from NGO" />
+        android:text="View Sakhis" />
 
     <Button
-        android:id="@+id/bFeedback"
+        android:id="@+id/bGenerateReport"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bRequestFromNGO"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Feedback to NGO" />
+        android:text="Generate Report" />
+
+
+    <Button
+        android:id="@+id/bBroadcasrtToAllSakhis"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bRequestFromNGO"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Broadcast to Sakhis" />
+
 </RelativeLayout>
