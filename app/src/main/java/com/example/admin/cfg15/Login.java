@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
     public static final String Email = "email";
     boolean flag=false;
     public static int user_id=0;
-    SharedPreferences sharedpreferences;
+    public static SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
