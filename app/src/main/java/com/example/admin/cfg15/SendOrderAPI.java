@@ -21,7 +21,7 @@ import java.net.URLEncoder;
  */
 
 public class SendOrderAPI extends AsyncTask<String, Void, String> {
-    final String InsertURL = "http://192.168.43.186/CFG/register.php";
+    final String InsertURL = "http://192.168.43.186/CFG/orders.php";
 
     Context context;
 
@@ -77,8 +77,8 @@ public class SendOrderAPI extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String aVoid) {
         Toast.makeText(context, aVoid, Toast.LENGTH_LONG).show();
-        if(aVoid.contains("-1")|| aVoid.isEmpty()) Login.user_id=-1;
-        else Login.user_id=Integer.parseInt(aVoid);
+        if(aVoid.contains("-1")|| aVoid.isEmpty()) PlaceOrderConfirm.OI=""+-1;
+        else PlaceOrderConfirm.OI=""+Integer.parseInt(aVoid);
     }
 
 

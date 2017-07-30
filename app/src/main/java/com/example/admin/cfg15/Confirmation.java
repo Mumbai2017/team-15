@@ -15,6 +15,8 @@ public class Confirmation extends AppCompatActivity {
         setContentView(R.layout.activity_confirmation);
         TextView fo= (TextView) findViewById(R.id.tvFinalOrder);
         fo.setText("Amount"+getIntent().getStringExtra("total"));
+        fo= (TextView) findViewById(R.id.tvConfirmation);
+        fo.setText("Ordered Placed!!"+getIntent().getStringExtra("OI"));
         ((Button)findViewById(R.id.btn)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
