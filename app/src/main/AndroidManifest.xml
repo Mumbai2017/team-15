@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Confirmation">
         </activity>
-        <activity android:name=".Feedback">
+        <activity android:name=".Feedback"
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity android:name=".PlaceOrderConfirm"></activity>
         <activity android:name=".Login">

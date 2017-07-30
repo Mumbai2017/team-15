@@ -5,15 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.admin.cfg15.OrderChoice">
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/bViewOrder"
-    android:text="view Order"/>
-    <Button
+    <RelativeLayout
         android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_margin="70dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bViewOrder"
+        android:text="view Order"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bViewOrder"
         android:id="@+id/vPlaceOrder"
-        android:text=" place an order"/>
+        android:text=" place an order"
+        android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 </RelativeLayout>
