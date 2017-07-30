@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2017 at 02:51 PM
+-- Generation Time: Jul 29, 2017 at 10:28 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `address` (
-  `type` varchar(255) NOT NULL,
+  `type` int(10) NOT NULL,
   `user_id` int(11) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `latitude` double NOT NULL,
-  `longitude` double NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -44,7 +44,7 @@ CREATE TABLE `feedback` (
   `type` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `text` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -81,8 +81,7 @@ CREATE TABLE `inventory_request` (
 CREATE TABLE `menu_card` (
   `item_name` text NOT NULL,
   `price` int(10) NOT NULL,
-  `item_id` int(10) NOT NULL,
-  `rating` int(10) NOT NULL DEFAULT '5'
+  `item_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -106,6 +105,8 @@ CREATE TABLE `order quantity` (
 CREATE TABLE `orders` (
   `order_id` int(255) NOT NULL,
   `cust_id` int(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `bill_amount` int(11) NOT NULL,
   `preference` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -181,7 +182,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
