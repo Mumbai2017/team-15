@@ -20,11 +20,11 @@
         android:id="@+id/etFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvFeedback"
+        android:layout_below="@+id/tvFeedback"
         android:layout_marginTop="63dp"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:layout_below="@+id/tvFeedback"
-        android:layout_alignStart="@+id/tvFeedback" />
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/bFeedback"
@@ -33,6 +33,6 @@
         android:layout_below="@+id/etFeedback"
         android:layout_marginTop="74dp"
         android:layout_toEndOf="@+id/tvFeedback"
-        android:text="Button"
-        android:onClick="submitFeedback"/>
+        android:onClick="submitFeedback"
+        android:text="Button" />
 </RelativeLayout>
