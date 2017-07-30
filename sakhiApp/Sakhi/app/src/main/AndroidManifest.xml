@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".StatusSakhi" />
-        <activity android:name=".Registeration" />
+        <activity android:name=".Registration" />
         <activity android:name=".Orders" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".NGODash"></activity>
         <activity android:name=".Request_NGO" />
         <activity android:name=".Sakhi_details"></activity>
     </application>

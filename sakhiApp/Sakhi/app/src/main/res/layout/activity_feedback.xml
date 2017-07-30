@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.sakhi.Feedback">
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="113dp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/etFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/tvFeedback"
+        android:layout_alignStart="@+id/tvFeedback" />
+
+    <Button
+        android:id="@+id/bFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFeedback"
+        android:layout_marginTop="74dp"
+        android:layout_toEndOf="@+id/tvFeedback"
+        android:text="Button"
+        android:onClick="submitFeedback"/>
+</RelativeLayout>
