@@ -19,20 +19,35 @@
         android:id="@+id/etFeedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_alignStart="@+id/tvFeedback"
+        android:layout_below="@+id/tvFeedback"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+=======
         android:layout_below="@+id/tvFeedback"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:layout_margin="10dp"
         android:inputType="textMultiLine"
         android:layout_alignParentStart="true" />
+>>>>>>> af76906a182e49b3123c28d33f48d67aea0f34ec
 
     <Button
         android:id="@+id/bFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etFeedback"
+<<<<<<< HEAD
+        android:layout_marginTop="74dp"
+        android:layout_toEndOf="@+id/tvFeedback"
+        android:onClick="submitFeedback"
+        android:text="Button" />
+=======
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:onClick="submitFeedback"
         android:text="Feedback" />
+>>>>>>> af76906a182e49b3123c28d33f48d67aea0f34ec
 </RelativeLayout>

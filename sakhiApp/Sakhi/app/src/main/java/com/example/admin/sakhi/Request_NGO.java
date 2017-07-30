@@ -7,15 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class Request_NGO extends AppCompatActivity {
-Button place;
+    Button place;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request__ngo);
-        Intent out=getIntent();
-        place=(Button)findViewById(R.id.con);
+        Intent out = getIntent();
+        place = (Button) findViewById(R.id.con);
         place.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

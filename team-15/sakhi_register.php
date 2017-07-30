@@ -11,15 +11,15 @@ if(!$conn) {
 	die("connection failed" . mysqli_error());
 }
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$pwd = $_POST["password"];
-$type = $_POST["type"];
-$address = $_POST["address"];
-$mobile_number = $_POST["phone"];
-$online = $_POST["online"];
-$pick_start = $_POST["pick_up_time_start"];
-$pick_close = $_POST["pick_up_time_close"];
+$name = $_POST["user"];
+$email = $_POST["user"];
+$pwd = $_POST["pass"];
+$type = "1";
+$address = $_POST["addr"];
+$mobile_number = $_POST["phn"];
+$online = "1";
+$pick_start = $_POST["time"];
+$pick_close = $_POST["time"];
 
 // echo "hello";
 $register_query = "insert into user values (null, \"" . $name . "\",\"" . $email . "\",\"" . $pwd . "\"," . $type . ",\"" . $address . "\"," . $mobile_number . "," . $online . ");";
