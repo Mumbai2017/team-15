@@ -16,12 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".StatusSakhi"></activity>
-=======
+        <activity android:name=".StatusSakhi" />
         <activity android:name=".Registeration" />
-        <activity android:name=".Orders"></activity>
->>>>>>> fa6f232dba48164b198b9f328b7ecf860f6bc53d
+        <activity android:name=".Orders" />
+        <activity android:name=".Request_NGO" />
+        <activity android:name=".Sakhi_details"></activity>
     </application>
 
 </manifest>
